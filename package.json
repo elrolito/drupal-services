@@ -1,0 +1,43 @@
+{
+  "name": "drupal-services",
+  "version": "0.1.0",
+  "description": "Promise-base NodeJS REST wrapper for Drupal Services 3.x API.",
+  "homepage": "https://github.com/elrolito/drupal-services",
+  "keywords": [
+    "q",
+    "promise",
+    "promises",
+    "drupal",
+    "services",
+    "rest",
+    "api",
+    "node"
+  ],
+  "main": "lib/drupal/service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Rolando Henry",
+    "email": "elrolito@me.com",
+    "url": "https://github.com/elrolito"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elrolito/drupal-services.git"
+  },
+  "bugs": {
+    "url": "http://github.com/elrolito/drupal-services/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "q-io": "~1.10.0",
+    "q": "~0.9.7"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "mocha": "~1.13.0",
+    "chai": "~1.8.0",
+    "nock": "~0.22.1"
+  }
+}
