@@ -7,29 +7,42 @@ Handles session cookie, user token and x-csrf headers.
 
 Usage
 -----
+
+**NOTE** Major API changes in this version!!
+
 Coffeescript example:
 
 ```coffee-script
-Service = require('drupal-services').Service
+{Service} = require 'drupal-services'
 
-service = new Service(
-	'/endpoint'                             # Your Drupal Services endpoint
-	{ username: 'user', password: 'enter' } # Login credentials
-	{                                       # http/https request object
-		hostname: 'yourserver.com'
-		port: 443
-	}
-)
+endpoint =
+	protocol: 'https'
+	auth: 'user:password'
+	hostname: 'apiserver.com'
+	pathname: '/myendpoint'
 
-service.connect()
-	.then(
-		(user) ->
-			# resource method args: resource path, method, request data (JSON)
-			return service.resource 'node/1', 'put', { title: 'updated!' }
-	)
-	.then(
-		(response) ->
-			console.log response.body
-	)
+service = new Service endpoint
+
+# Query node resource
+service
+.index '/node'
+.then (results) ->
+	console.log results
+
+# If user needs to be logged in, using factory method:
+Service
+.factory endpoint
+.login 'user', 'password'
+.then (user) ->
+	# Retreive a node
+	service.retreive 'node', 1
+
+.then (node) ->
+	console.log node
 
 ```
+
+Todo
+----
+
+I still need to write some more tests :)

@@ -1,6 +1,6 @@
 {
   "name": "drupal-services",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Promise-base NodeJS REST wrapper for Drupal Services 3.x API.",
   "homepage": "https://github.com/elrolito/drupal-services",
   "keywords": [
@@ -31,13 +31,21 @@
   },
   "license": "MIT",
   "dependencies": {
-    "q-io": "~1.10.0",
+    "concat-stream": "^1.4.6",
+    "lodash": "^2.4.1",
     "q": "~0.9.7"
   },
   "devDependencies": {
+    "chai": "^1.9.1",
+    "chai-as-promised": "^4.1.1",
     "coffee-script": "~1.6.3",
-    "mocha": "~1.13.0",
-    "chai": "~1.8.0",
-    "nock": "~0.22.1"
+    "grunt": "^0.4.5",
+    "grunt-codo": "^0.2.0",
+    "grunt-coffeelint": "0.0.10",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-test": "^0.11.0",
+    "mocha": "^1.20.1"
   }
 }
