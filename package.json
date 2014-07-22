@@ -1,6 +1,6 @@
 {
   "name": "drupal-services",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Promise-base NodeJS REST wrapper for Drupal Services 3.x API.",
   "homepage": "https://github.com/elrolito/drupal-services",
   "keywords": [
@@ -13,9 +13,9 @@
     "api",
     "node"
   ],
-  "main": "lib/drupal/service.js",
+  "main": "src/drupal/service.coffee",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt test"
   },
   "author": {
     "name": "Rolando Henry",
